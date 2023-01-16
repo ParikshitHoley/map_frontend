@@ -13,7 +13,7 @@ export const Allroute=()=>{
         <Route path="/dashboard" element={<PrivateComponent><Dashboard/></PrivateComponent>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
-        <Route path="/map" element={<Map></Map>}></Route>
+        <Route path="/map" element={<PrivateComponent><Map/></PrivateComponent>}></Route>
 
     </Routes>
 
