@@ -19,10 +19,10 @@ export const Signupactioncreator=(type,payload)=>{
 
 export const Usersignup=(data)=>async(dispatch)=>{
     dispatch(Signupactioncreator(SIGNUP_REQUEST,true))
-    axios.post("http://localhost:8080/signup",data).then(({data})=>dispatch(Signupactioncreator(SIGNUP_SUCCESS,data.token))).catch((err)=>dispatch(Signupactioncreator(SIGNUP_ERROR,err.message)))
+    axios.post("https://mapbackend.onrender.com/signup",data).then(({data})=>dispatch(Signupactioncreator(SIGNUP_SUCCESS,data.token))).catch((err)=>dispatch(Signupactioncreator(SIGNUP_ERROR,err.message)))
 }
 
 export const Userlogin=(data)=>async(dispatch)=>{
     dispatch(Signupactioncreator(LOGIN_REQUEST,true))
-    axios.post("http://localhost:8080/login",data).then(({data})=>dispatch(Signupactioncreator(LOGIN_SUCCESS,data.token))).catch((err)=>dispatch(Signupactioncreator(LOGIN_ERROR,err.message)))
+    axios.post("https://mapbackend.onrender.com/login",data).then(({data})=>dispatch(Signupactioncreator(LOGIN_SUCCESS,data.token))).catch((err)=>dispatch(Signupactioncreator(LOGIN_ERROR,err.message)))
 }
