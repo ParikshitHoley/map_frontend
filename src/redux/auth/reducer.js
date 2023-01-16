@@ -1,4 +1,4 @@
-import { SIGNUP_ERROR,SIGNUP_SUCCESS,SIGNUP_REQUEST ,LOGIN_REQUEST,LOGIN_ERROR,LOGIN_SUCCESS} from "./action";
+import { CITY,LOGOUT,SIGNUP_ERROR,SIGNUP_SUCCESS,SIGNUP_REQUEST ,LOGIN_REQUEST,LOGIN_ERROR,LOGIN_SUCCESS} from "./action";
 
 
 const init ={
@@ -66,7 +66,20 @@ export const authreducer=(state=init,action)=>{
                 loginerror:false
                 
             }  
+            case LOGOUT : return  {
+                signuploading:false,
+                signuptoken:"",
+                signuperror:false,
+                signuperrormessage:"",
+                isauth:false,
+                loginloading:false,
+                logintoken:false,
+                loginerror:false
+            }
             
+            case CITY : return {
+                ...state,city:action.payload
+            }
             default :return state
     }  
     
